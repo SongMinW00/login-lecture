@@ -2,7 +2,7 @@ class UserStorage {
     static #users = {
         id: ["poh1005", "naver"],
         psword: ["1234", "123456"],
-        name: ["alsdn", "qudcks"],
+        
     };
 
     static getUsers(...fields) {
