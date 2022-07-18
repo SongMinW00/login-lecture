@@ -2,7 +2,8 @@ html {
     height: 100%;
   }
   body {
-    margin:0;
+    margin:0 auto;
+    text-align: center;
     padding:0;
     font-family: sans-serif;
     background: linear-gradient(#141e30, #243b55);
@@ -13,6 +14,7 @@ html {
     top: 50%;
     left: 50%;
     width: 400px;
+    margin: 0 auto;
     padding: 40px;
     transform: translate(-50%, -50%);
     background: rgba(0,0,0,.5);
@@ -24,6 +26,7 @@ html {
   .login-box h2 {
     margin: 0 0 30px;
     padding: 0;
+    margin: 0 auto;
     color: #fff;
     text-align: center;
   }
@@ -37,6 +40,7 @@ html {
     padding: 10px 0;
     font-size: 16px;
     color: #fff;
+    margin: 0 auto;
     margin-bottom: 30px;
     border: none;
     border-bottom: 1px solid #fff;
@@ -48,6 +52,7 @@ html {
     top:0;
     left: 0;
     padding: 10px 0;
+    margin: 0 auto;
     font-size: 16px;
     color: #fff;
     pointer-events: none;
@@ -95,6 +100,7 @@ html {
     top: 0;
     left: -100%;
     width: 100%;
+    margin: 0 auto;
     height: 2px;
     background: linear-gradient(90deg, transparent, #03e9f4);
     animation: btn-anim1 1s linear infinite;
@@ -113,6 +119,7 @@ html {
     top: -100%;
     right: 0;
     width: 2px;
+    margin: 0 auto;
     height: 100%;
     background: linear-gradient(180deg, transparent, #03e9f4);
     animation: btn-anim2 1s linear infinite;
@@ -160,6 +167,7 @@ html {
   @keyframes btn-anim4 {
     0% {
       bottom: -100%;
+      margin: 0 auto;
     }
     50%,100% {
       bottom: 100%;
@@ -167,21 +175,21 @@ html {
   }
 
   /* GENERAL BUTTON STYLING */
-button,
-button::after {
+#button,
+#button::after {
   -webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
   -o-transition: all 0.3s;
 	transition: all 0.3s;
 }
 
-button {
+#button {
   background: none;
   border: 3px solid #fff;
   border-radius: 3px;
   color: #fff;
   display: block;
-  font-size: 0.6em;
+  font-size: 0.8em;
   font-weight: bold;
   margin: 1em auto;
   padding: 2em 10em;
@@ -189,15 +197,15 @@ button {
   text-transform: uppercase;
 }
 
-button::before,
-button::after {
+#button::before,
+#button::after {
   background: #fff;
   content: '';
   position: absolute;
   z-index: -1;
 }
 
-button:hover {
+#button:hover {
   color: #2ecc71;
 }
 

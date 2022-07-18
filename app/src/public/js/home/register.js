@@ -1,18 +1,22 @@
-const id = document.querySelector("#id");
-    psword=document.querySelector("#psword");
-    loginBtn=document.querySelector("#button");
+const id = document.querySelector("#id"),
+    name = document.querySelector("#name"),
+    psword=document.querySelector("#psword"),
+    confirmPsword = document.querySelector("#confirm-psword"),
+    registerBtn=document.querySelector("#button");
     
     
-    loginBtn.addEventListener("click", login);
+    registerBtn.addEventListener("click", register);
     
-    function login(){
+    function register(){
         const req = {
             id: id.value,
+            name: name.value,
             psword: psword.value,
+            confirmPsword: confirmPsword.value,
         };
         console.log(req);
         console.log(JSON.stringify(req));
-        fetch("/login", {
+        fetch("/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -23,7 +27,7 @@ const id = document.querySelector("#id");
             .then((res) => res.json())
             .then((res) => {
                 if (res.success){
-                    location.href = "/";
+                    location.href = "/login";
                 }
                 else{
                     alert(res.msg);
